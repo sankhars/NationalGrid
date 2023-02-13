@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 
 @Schema(description="Coordinate system are In WGS84 Format")
-public class Coordinate {
+public class WGS84Coordinate {
     @Schema(description ="Value is in Dec format", example="51.71105")
     @NotBlank
     private BigDecimal latitude;
@@ -14,7 +14,7 @@ public class Coordinate {
     @NotBlank
     private BigDecimal longitude;
 
-    public Coordinate(BigDecimal longitude, BigDecimal latitude) {
+    public WGS84Coordinate(BigDecimal longitude, BigDecimal latitude) {
         this.longitude = longitude;
         this.latitude = latitude;
     }

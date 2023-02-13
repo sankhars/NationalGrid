@@ -13,9 +13,9 @@ public class Geometry {
     private GeometryType type;
     @Schema(description ="Coordinates for the geometry to draw a point or multipolygon")
     @NotBlank
-    private List<Coordinate> coordinates;
+    private List<WGS84Coordinate> coordinates;
 
-    public Geometry(GeometryType type, List<Coordinate> coordinates) {
+    public Geometry(GeometryType type, List<WGS84Coordinate> coordinates) {
         this.type = type;
         this.coordinates = coordinates;
     }
@@ -28,11 +28,11 @@ public class Geometry {
         this.type = type;
     }
 
-    public List<Coordinate> getCoordinates() {
+    public List<WGS84Coordinate> getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(List<Coordinate> coordinates) {
+    public void setCoordinates(List<WGS84Coordinate> coordinates) {
         this.coordinates = coordinates;
     }
 }
