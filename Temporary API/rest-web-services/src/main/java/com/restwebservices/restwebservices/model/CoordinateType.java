@@ -4,7 +4,7 @@ public enum CoordinateType {
     OGSB(27700), WGS84(4326);
     private final int type;
 
-    CoordinateType(int type) {
+    private CoordinateType(int type) {
         this.type = type;
     }
 
