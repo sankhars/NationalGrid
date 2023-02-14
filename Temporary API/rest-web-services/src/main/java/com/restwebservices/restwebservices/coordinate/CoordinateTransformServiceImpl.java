@@ -1,7 +1,7 @@
 package com.restwebservices.restwebservices.coordinate;
 
-import com.restwebservices.restwebservices.model.Coordinate;
-import com.restwebservices.restwebservices.model.CoordinateType;
+import com.restwebservices.restwebservices.model.api.Coordinate;
+import com.restwebservices.restwebservices.model.api.CoordinateType;
 import geotrellis.proj4.CRS;
 import geotrellis.proj4.Transform;
 import org.springframework.stereotype.Service;

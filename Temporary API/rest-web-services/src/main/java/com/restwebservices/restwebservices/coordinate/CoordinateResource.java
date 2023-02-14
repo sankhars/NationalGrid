@@ -1,7 +1,7 @@
 package com.restwebservices.restwebservices.coordinate;
 
-import com.restwebservices.restwebservices.model.Coordinate;
-import com.restwebservices.restwebservices.model.CoordinateType;
+import com.restwebservices.restwebservices.model.api.Coordinate;
+import com.restwebservices.restwebservices.model.api.CoordinateType;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;

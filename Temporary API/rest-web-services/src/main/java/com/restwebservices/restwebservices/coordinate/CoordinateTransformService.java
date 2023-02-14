@@ -1,7 +1,7 @@
 package com.restwebservices.restwebservices.coordinate;
 
-import com.restwebservices.restwebservices.model.Coordinate;
-import com.restwebservices.restwebservices.model.CoordinateType;
+import com.restwebservices.restwebservices.model.api.Coordinate;
+import com.restwebservices.restwebservices.model.api.CoordinateType;
 
 import java.util.List;
 

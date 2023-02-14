@@ -1,7 +1,7 @@
 package com.restwebservices.restwebservices.region;
 
 
-import com.restwebservices.restwebservices.model.Region;
+import com.restwebservices.restwebservices.model.api.Region;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,10 +1,10 @@
 package com.restwebservices.restwebservices.region;
 
 
-import com.restwebservices.restwebservices.model.WGS84Coordinate;
-import com.restwebservices.restwebservices.model.Geometry;
-import com.restwebservices.restwebservices.model.GeometryType;
-import com.restwebservices.restwebservices.model.Region;
+import com.restwebservices.restwebservices.model.api.WGS84Coordinate;
+import com.restwebservices.restwebservices.model.api.Geometry;
+import com.restwebservices.restwebservices.model.api.GeometryType;
+import com.restwebservices.restwebservices.model.api.Region;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
