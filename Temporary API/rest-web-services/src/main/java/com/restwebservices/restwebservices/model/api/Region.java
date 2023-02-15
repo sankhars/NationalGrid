@@ -14,9 +14,9 @@ public class Region {
     private Integer id;
 
     @NotBlank
-    private Geometry geometry;
+    private MultipolygonGeometry geometry;
 
-    public Region(Integer id, String name, Geometry geometry) {
+    public Region(Integer id, String name, MultipolygonGeometry geometry) {
         this.id = id;
         this.name = name;
         this.geometry = geometry;
@@ -38,11 +38,15 @@ public class Region {
         this.id = id;
     }
 
-    public Geometry getGeometry() {
+    public MultipolygonGeometry getGeometry() {
         return geometry;
     }
 
-    public void setGeometry(Geometry geometry) {
+    public void setGeometry(MultipolygonGeometry geometry) {
         this.geometry = geometry;
     }
+
+//    public static Region valueOf(GeoJson) {
+//        //for
+//    }
 }

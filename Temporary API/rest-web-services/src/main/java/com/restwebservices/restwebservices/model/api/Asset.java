@@ -9,11 +9,10 @@ public class Asset {
     @NotBlank
     private String gnodeName;
 
-
     @NotBlank
-    private Geometry geometry;
+    private PointGeometry geometry;
 
-    public Asset(String gnodeName, Geometry geometry) {
+    public Asset(String gnodeName, PointGeometry geometry) {
         this.gnodeName = gnodeName;
         this.geometry = geometry;
     }
@@ -26,11 +25,11 @@ public class Asset {
         this.gnodeName = gnodeName;
     }
 
-    public Geometry getGeometry() {
+    public PointGeometry getGeometry() {
         return geometry;
     }
 
-    public void setGeometry(Geometry geometry) {
+    public void setGeometry(PointGeometry geometry) {
         this.geometry = geometry;
     }
 }

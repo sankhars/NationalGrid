@@ -13,6 +13,7 @@ public class Coordinate {
     @NotBlank
     private BigDecimal y;
 
+
     public Coordinate() {
     }
 

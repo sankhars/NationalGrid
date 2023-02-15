@@ -18,9 +18,9 @@ public class LicenseArea {
     private Integer id;
 
     @NotBlank
-    private Geometry geometry;
+    private MultipolygonGeometry geometry;
 
-    public LicenseArea(Integer id, String name, String longName, Geometry geometry) {
+    public LicenseArea(Integer id, String name, String longName, MultipolygonGeometry geometry) {
         this.name = name;
         this.longName = longName;
         this.id = id;
@@ -51,11 +51,11 @@ public class LicenseArea {
         this.id = id;
     }
 
-    public Geometry getGeometry() {
+    public MultipolygonGeometry getGeometry() {
         return geometry;
     }
 
-    public void setGeometry(Geometry geometry) {
+    public void setGeometry(MultipolygonGeometry geometry) {
         this.geometry = geometry;
     }
 }
