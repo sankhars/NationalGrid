@@ -1,5 +1,7 @@
 package com.restwebservices.restwebservices.init;
 
+import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.restwebservices.restwebservices.model.geojson.Geometry;
 import com.restwebservices.restwebservices.model.geojson.Regions;
@@ -21,8 +23,9 @@ public class ResourceLoader {
             System.out.println("gsp_region.json is loaded");
             byte[] testData = is.readNBytes(100);
             System.out.println("Part of data: " + new String(testData));
-          //  ObjectMapper mapper = new ObjectMapper();
-            //regions = mapper.readValue(is, Regions.class);
+          ObjectMapper mapper = new ObjectMapper();
+           // mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
+          regions = mapper.readValue(is, Regions.class);
 
         } else {
             throw new RuntimeException("resource not found");
