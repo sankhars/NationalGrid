@@ -1,24 +1,18 @@
 package com.restwebservices.restwebservices.model.geojson;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.HashSet;
-import java.util.Set;
-
-public class Properties{
-
+public class Properties {
+   @JsonProperty("RegionID")
     public int regionID;
+   @JsonProperty("RegionName")
+      public String regionName;
 
-    public String regionName;
-    private Set<Geometry> geometry = new HashSet< >();
-
-
-
-    public Properties(int regionID, String regionName) {
+    public Properties( int regionID, String regionName) {
         this.regionID = regionID;
         this.regionName = regionName;
     }
-
-    public Properties() {
+    public Properties(){
 
     }
 
@@ -36,12 +30,5 @@ public class Properties{
 
     public void setRegionName(String regionName) {
         this.regionName = regionName;
-    }
-    public Set<Geometry> getGeometry() {
-        return geometry;
-    }
-
-    public void setGeometry(Set<Geometry> geometry) {
-        this.geometry = geometry;
     }
 }

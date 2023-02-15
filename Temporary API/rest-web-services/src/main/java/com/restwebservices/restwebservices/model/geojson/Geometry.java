@@ -1,18 +1,17 @@
 package com.restwebservices.restwebservices.model.geojson;
 
-import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Geometry{
     public String type;
-    public BigDecimal coordinates;
+    public ArrayList<ArrayList<ArrayList<ArrayList<Double>>>> coordinates;
 
-    public Geometry(String type, BigDecimal coordinates) {
+    public Geometry(String type, ArrayList<ArrayList<ArrayList<ArrayList<Double>>>> coordinates) {
         this.type = type;
         this.coordinates = coordinates;
     }
 
     public Geometry() {
-
     }
 
     public String getType() {
@@ -23,11 +22,12 @@ public class Geometry{
         this.type = type;
     }
 
-    public BigDecimal getCoordinates() {
+    public ArrayList<ArrayList<ArrayList<ArrayList<Double>>>> getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(BigDecimal coordinates) {
+    public void setCoordinates(ArrayList<ArrayList<ArrayList<ArrayList<Double>>>> coordinates) {
         this.coordinates = coordinates;
     }
 }
+
