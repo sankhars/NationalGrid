@@ -23,4 +23,11 @@ public class CoordinateTransformServiceImpl implements CoordinateTransformServic
         return outputCoordinates;
     }
 
+    @Override
+    public Coordinate convertCoordinate(CoordinateType inputCoordinateType, CoordinateType outputCoordinateType, Coordinate inputCoordinate) {
+        var rule = Transform.apply(CRS.fromEpsgCode(inputCoordinateType.getType()), CRS.fromEpsgCode(outputCoordinateType.getType()));
+        Tuple2<Object, Object> valueHolder = rule.apply(inputCoordinate.getX().doubleValue(), inputCoordinate.getY().doubleValue());
+        return new Coordinate((Double) valueHolder._1(), (Double) valueHolder._2());
+    }
+
 }

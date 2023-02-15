@@ -3,16 +3,16 @@ package com.restwebservices.restwebservices.model.geojson;
 
 import java.util.ArrayList;
 
-public class Regions {
+public class GeoRegions {
     public String type;
     public String name;
 
-    public Regions(String type, String name, ArrayList<Feature> features) {
+    public GeoRegions(String type, String name, ArrayList<Feature> features) {
         this.type = type;
         this.name = name;
         this.features = features;
     }
-    public Regions(){
+    public GeoRegions(){
 
     }
 

@@ -1,7 +1,7 @@
 package com.restwebservices.restwebservices.region;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.restwebservices.restwebservices.model.geojson.Regions;
+import com.restwebservices.restwebservices.model.geojson.GeoRegions;
 
 
 import java.io.FileInputStream;
@@ -18,14 +18,15 @@ public class JacksonJsonToPojo {
 //        ClassLoader classLoader = JacksonJsonToPojo.class.getClassLoader();
        // File file = new File(classLoader.getResource("gsp_region.json").getFile());
         // Read JSON file and convert to java object
-        InputStream fileInputStream = new FileInputStream("gsp_region.json");
-        Regions post1 = mapper.readValue(fileInputStream, Regions.class);
+        InputStream fileInputStream = new FileInputStream("src/main/resources/gsp_region.json");
+        GeoRegions post1 = mapper.readValue(fileInputStream, GeoRegions.class);
         fileInputStream.close();
 
         // print post object
         System.out.println("Printing post details");
         System.out.println(post1.getType());
         System.out.println(post1.getFeatures().get(0).getProperties().getRegionName());
+        System.out.println(post1.getFeatures().get(0).getGeometry().getCoordinates().get(0).get(0).get(0).get(0));
        // System.out.println(post1.getName());
         // print tags of this post
         /*
