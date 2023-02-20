@@ -4,6 +4,7 @@ package com.restwebservices.restwebservices.region;
 import com.restwebservices.restwebservices.init.ResourceLoader;
 import com.restwebservices.restwebservices.model.api.Region;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Tag(name="regions", description="The region API")
@@ -24,17 +26,12 @@ public class RegionResource {
     private ResourceLoader resourceLoader;
 
     @Operation(summary = "Get the sample region list")
-    @GetMapping("/sample")
-    public List<Region> retrieveSampleRegions(){
-        List<Region> limitedRegionList = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            limitedRegionList.add(resourceLoader.getRegions().get(i));
-        }
-
-        return limitedRegionList;
+    @GetMapping("/sample/{size}")
+    public List<Region> retrieveSampleRegions(@Parameter(description = "Sample size", example="5") @PathVariable Integer size){
+        return retrieveAllRegions().stream().limit(size).collect(Collectors.toList());
 
     }
-    @Operation(summary = "Get the region list, don't call it in Swagger!!")
+    @Operation(summary = "Get the region list, if you call this API in Swagger, please use the \"/sample\" one.")
     @GetMapping("")
     public List<Region> retrieveAllRegions(){
          return resourceLoader.getRegions();
